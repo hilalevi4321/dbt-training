@@ -3,5 +3,5 @@
         materialized='table'
     )
 }}
-SELECT * 
-FROM RAW.GLOBALMART.ORDERS
+SELECT *
+FROM raw.globalmart.products
