@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='view'
+    )
+}}
+
 select o.orderid,
        o.orderdate,
        o.SHPIDATE,

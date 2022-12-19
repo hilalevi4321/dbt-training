@@ -4,4 +4,4 @@
     )
 }}
 SELECT *
-FROM RAW.GLOBALMART.CUSTOMRTS
+FROM raw.globalmart.CUSTOMRTS
