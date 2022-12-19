@@ -5,11 +5,13 @@ select o.orderid,
        o.ORDERSELLINGPRICE-o.ORDERCOSTPRICE AS orders_profit,
        o.ORDERSELLINGPRICE,
        o.ORDERCOSTPRICE,
+       c.customerid,
        c.customername,
        c.segment,
        c.country,
        g.category,
        g.productname,
+       g.productid,
        g.subcategory
 from {{ ref('raw_orders') }} as o
 left join {{ ref('raw_customers') }} as c
