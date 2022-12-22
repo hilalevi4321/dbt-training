@@ -3,5 +3,5 @@
         materialized='table'
     )
 }}
-SELECT *
-FROM {{ source('globalmart', 'customers') }}
+SELECT * 
+FROM  {{ source('public', 'raw_events') }}
