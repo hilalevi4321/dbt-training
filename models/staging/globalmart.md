@@ -1,10 +1,11 @@
-{% docs shipmode %}
+{% docs order_status %}
 
-| shipmode       | definition                                         |
-|----------------|----------------------------------------------------|
-| First Class    | Orders are shipped via First Class with Courier    |
-| Second Class   | Orders are shipped via Second Class with Courier   |
-| Standard Class | Orders are shipped via Standard Class with Courier |
-| Same Day       | Orders are personally shipped via Globalmart Team  |
+| order_status       | definition                                         |
+|--------------------|----------------------------------------------------|
+| order.delivered    | Orders that shipped                                |
+| order.completed    | Orders that finished                               |
+| order.success      | Orders that suvcess                                |
+| order.rejecte      | Orders are personally shipped via Globalmart Team  |
+|order.cancel        | Orders that canceled
 
 {% enddocs %}

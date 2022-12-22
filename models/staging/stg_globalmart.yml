@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: stg_orders
+  - name: stg_order
     description: one unique order per row
     columns:
-      - name: shipmode
-        description: '{{doc("shipmode")}}'
+      - name: order_status
+        description: '{{doc("order_status")}}'
