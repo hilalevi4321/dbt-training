@@ -1,7 +1,1 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
-SELECT * 
-FROM  {{ source('public', 'raw_events') }}
+{{ config(materialized="table") }} select * from {{ source("public", "raw_events") }}
