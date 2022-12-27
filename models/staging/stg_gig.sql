@@ -1,5 +1,14 @@
 
-SELECT a.*
+SELECT a.entity, 
+       a.gig_buried,
+       a.gig_category_id,
+       a.gig_category_name,
+       a.gig_id, a.gig_price,
+       a.gig_status,
+       a.gig_sub_category_name,
+       a.id,
+       a.inserted_at,
+       a.created_at
 FROM 
 {{ ref('raw_events') }} as a
 
