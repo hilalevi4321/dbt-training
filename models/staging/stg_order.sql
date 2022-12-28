@@ -9,7 +9,10 @@ SELECT a.id ,
        a.order_package_id ,
        a.order_parent_order_id, 
        a.order_status,
-       a.order_type
+       a.order_type,
+       "GROUP" as order_group,
+       {{ amount_bucket() }}
+
 FROM 
 {{ ref('raw_events') }} as a
 
@@ -22,3 +25,4 @@ AND  "GROUP" IN ( 'order_status',
                   'ratings',
                   'rating',
                   'offer' )  
+

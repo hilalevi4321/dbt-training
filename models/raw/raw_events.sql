@@ -4,4 +4,4 @@
 
  SELECT * 
  FROM 
- { source("public", "raw_events") }}
+ {{ source("public", "raw_events") }}
