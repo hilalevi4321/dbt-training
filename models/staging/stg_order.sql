@@ -1,5 +1,6 @@
 
 SELECT a.id ,
+       a.created_at,
        a.inserted_at,
        a.type,
        a.order_amount,
@@ -12,12 +13,13 @@ SELECT a.id ,
        a.order_type,
        "GROUP" as order_group,
        {{ amount_bucket() }}
+    , SUBSTRING(a.created_at,0,10) date_create
 
 FROM 
 {{ ref('raw_events') }} as a
 
 WHERE 1=1
-         
+
 AND  "GROUP" IN ( 'order_status',
                   'order_flow',
                   'order_requirements',

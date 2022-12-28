@@ -8,7 +8,7 @@ SELECT a.entity,
        a.gig_sub_category_name,
        a.id,
        a.inserted_at,
-       a.created_at
+       SUBSTRING(a.created_at,0,10) date_create
 FROM 
 {{ ref('raw_events') }} as a
 
@@ -28,4 +28,5 @@ AND type IN (   'gigs.autounburied',
                 'predicted_handpicks.enqueue')
                 
 OR "GROUP" IN ( 'gig_creation_funnel',
-                'pricing_factors' )  
+                'pricing_factors' )
+                

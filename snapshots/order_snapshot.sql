@@ -12,6 +12,6 @@
             ORDER_AMOUNT,
             ORDER_STATUS,
             ORDER_ID,
-            ORDER_TYPE from {{ ref("order") }}
+            ORDER_TYPE from {{ ref("orders") }}
 
 {% endsnapshot %}
