@@ -3,4 +3,5 @@
 }}
 
  SELECT * 
- FROM {{ source("public", "raw_events") }}
+ FROM 
+ { source("public", "raw_events") }}
